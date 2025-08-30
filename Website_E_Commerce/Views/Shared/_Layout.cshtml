@@ -7,32 +7,107 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-    </style>
 </head>
 <body>
-    <div class="container d-flex mb-0">
-        <i class="me-2 bi bi-geo-alt"></i> 140 Lê Trọng Tấn
-        <i class="ms-4 me-2 bi bi-envelope-fill"></i> abc@gmail.com
-        <i class="ms-4 me-2 bi bi-telephone"></i> 0123456789
-        <div class="ms-auto d-flex">
-            <i class="me-2 bi bi-person-fill-add"></i>@Html.ActionLink("Đăng ký", "DangKy", "Home", new { @class = "nav-link" })
-            <i class="ms-4 me-2 bi bi-person-fill-check"></i>@Html.ActionLink("Đăng Nhập", "DangNhap", "Home", new { @class = "nav-link" })
+    <header>
+        <div class="container d-none d-lg-flex mb-0">
+            <i class="me-2 bi bi-geo-alt"></i> 140 Lê Trọng Tấn
+            <i class="ms-4 me-2 bi bi-envelope-fill"></i> abc@gmail.com
+            <i class="ms-4 me-2 bi bi-telephone"></i> 0123456789
+            <div class="ms-auto d-flex">
+                <i class="me-2 bi bi-person-fill-add"></i>@Html.ActionLink("Đăng Ký", "Register", "Account", null, new { @class = "nav-link" })
+                <i class="ms-4 me-2 bi bi-person-fill-check"></i>@Html.ActionLink("Đăng Nhập", "Login", "Account", null, new { @class = "nav-link" })
+            </div>
         </div>
-    </div>
-    <div>
-
-    </div>
-    <nav class="navbar bg-black">
-        <div class="d-flex justify-content-center p-2 ">
-            <ul class="m-0 text-light">
-                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
-                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
-                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
-                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
-            </ul>
+        <!--Desktop Header-Middle-->
+        <div class="row d-none d-xl-flex">
+            <div class="col-md-4">
+                <img src="~/Content/Images/logo.jpg" />
+            </div>
+            <div class="col-md-6 align-content-center">
+                <form class="d-flex row">
+                    <input class="form-control flex-fill w-75 me-2" type="search" placeholder="Nhập từ khóa tìm kiếm">
+                    <button class="btn btn-dark w-auto" type="submit"><i class="bi bi-search"></i> Tìm Kiếm</button>
+                </form>
+            </div>
+            <div class="col-md-2 align-content-center text-center">
+                <div style="background-color: #c8a368; width:100px" class="p-1 btn"><i class="bi bi-cart4"></i> Giỏ Hàng</div>
+            </div>
         </div>
-    </nav>
+        <!--Table Header-Middle-->
+        <div class="row d-none d-md-flex d-xl-none">
+            <div class="col-md-4">
+                <img src="~/Content/Images/logo.jpg" />
+            </div>
+            <div class="col-md-8 align-content-center text-end">
+                <button class="btn btn-dark w-auto" type="submit"><i class="bi bi-search"></i></button>
+                <div style="background-color: #c8a368; width:100px" class="p-1 btn"><i class="bi bi-cart4"></i> Giỏ Hàng</div>
+            </div>
+        </div>
+        <!--Mobile Header-Middle-->
+        <div class="row d-flex d-md-none">
+            <img src="~/Content/Images/logo.jpg" />
+        </div>
+        <!--Desktop Nav-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-none d-lg-flex">
+            <div class="container-fluid p-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        @Html.ActionLink("TRANG CHỦ", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("GIỚI THIỆU", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("SẢN PHẨM", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("TIN TỨC", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("LIÊN HỆ", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Table Nav-->
+        <nav class="navbar navbar-dark bg-dark d-none d-md-flex d-lg-none p-2">
+            <div class="container-fluid">
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="bi bi-list"></i> Menu
+                </button>
+                <i class="bi bi-person-circle text-white"></i>
+            </div>
+        </nav>
+        <!--Mobile Nav-->
+        <nav class="navbar navbar-dark bg-dark d-flex d-md-none p-2">
+            <div class="container-fluid">
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="d-flex">
+                    <i class="bi bi-search text-white me-2"></i>
+                    <i class="bi bi-cart4 text-white me-2"></i>
+                    <a href="@Url.Action("Register", "Account")" class="nav-link"><i class="bi bi-person-circle text-white me-2"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">MENU</h5>
+                <button type="button" class="btn-close-white btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-unstyled">
+                    <li><a href="#" class="py-2">Trang chủ</a></li>
+                    <li><a href="#" class="py-2">Giới thiệu</a></li>
+                    <li><a href="#" class="py-2">Sản phẩm</a></li>
+                    <li><a href="#" class="py-2">Tin tức</a></li>
+                    <li><a href="#" class="py-2">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <div class="container body-content">
         @RenderBody()
         <hr />

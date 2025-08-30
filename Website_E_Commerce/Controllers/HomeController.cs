@@ -12,7 +12,10 @@ namespace Website_E_Commerce.Controllers
         {
             return View();
         }
-
+        public ActionResult DangKy()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

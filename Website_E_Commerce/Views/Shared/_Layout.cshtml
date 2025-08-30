@@ -4,24 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-            </div>
+    <div class="container d-flex mb-0">
+        <i class="me-2 bi bi-geo-alt"></i> 140 Lê Trọng Tấn
+        <i class="ms-4 me-2 bi bi-envelope-fill"></i> abc@gmail.com
+        <i class="ms-4 me-2 bi bi-telephone"></i> 0123456789
+        <div class="ms-auto d-flex">
+            <i class="me-2 bi bi-person-fill-add"></i>@Html.ActionLink("Đăng ký", "DangKy", "Home", new { @class = "nav-link" })
+            <i class="ms-4 me-2 bi bi-person-fill-check"></i>@Html.ActionLink("Đăng Nhập", "DangNhap", "Home", new { @class = "nav-link" })
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <nav class="navbar bg-black">
+        <div class="d-flex justify-content-center p-2 ">
+            <ul class="m-0 text-light">
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "nav-link" })
+            </ul>
         </div>
     </nav>
     <div class="container body-content">

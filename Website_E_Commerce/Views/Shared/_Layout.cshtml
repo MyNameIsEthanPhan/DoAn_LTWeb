@@ -12,8 +12,8 @@
     <header>
         <div class="container d-none d-lg-flex mb-0">
             <i class="me-2 bi bi-geo-alt"></i> 140 Lê Trọng Tấn
-            <i class="ms-4 me-2 bi bi-envelope-fill"></i> abc@gmail.com
-            <i class="ms-4 me-2 bi bi-telephone"></i> 0123456789
+            <i class="ms-4 me-2 bi bi-envelope-fill"></i> styleheaven@gmail.com
+            <i class="ms-4 me-2 bi bi-telephone"></i> 0123 456 789
             <div class="ms-auto d-flex">
                 <i class="me-2 bi bi-person-fill-add"></i>@Html.ActionLink("Đăng Ký", "Register", "Account", null, new { @class = "nav-link" })
                 <i class="ms-4 me-2 bi bi-person-fill-check"></i>@Html.ActionLink("Đăng Nhập", "Login", "Account", null, new { @class = "nav-link" })
@@ -110,12 +110,24 @@
     </header>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
-
+    <footer class="bg-dark text-light mb-5">
+        <div class="pt-3 text-center">
+            <h4>Thông tin liên hệ</h4>
+            <p><i class="bi bi-geo-alt me-2"></i> 140 Lê Trọng Tấn, TP. Hồ Chí Minh</p>
+            <p><i class="bi bi-envelope-fill me-2"></i> styleheaven@gmail.com</p>
+            <p><i class="bi bi-telephone me-2"></i> 0123 456 789</p>
+            <div>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-2 mb-0 pb-2">
+            <p class="mb-0">© 2025 StyleHeaven. All rights reserved. | ĐKKD: 123456789 - Sở KHĐT TP.HCM</p>
+            <p><a href="#" class="text-white text-decoration-none">Chính sách bảo mật</a> | <a href="#" class="text-white text-decoration-none">Điều khoản dịch vụ</a></p>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

@@ -2,6 +2,63 @@
 @{
     ViewBag.Title = "Login";
 }
+<style>
+    .btn-submit {
+        border-radius: 0;
+        border: none;
+    }
 
-<h2>Login</h2>
+    .btn-create {
+        border-radius: 0;
+    }
+
+    .btn-submit:hover {
+        background-color: #1ebaf8;
+    }
+
+    .btn-create:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .forgot-password {
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        padding-bottom: 2px;
+    }
+</style>
+<div class="d-flex justify-content-center align-items-center">
+    <div>
+        <h4 class="text-center">My Account</h4>
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-lg-5 p-4 border me-3">
+                    <h5 class="mb-4">LOGIN</h5>
+                    <p>If you have an account with us, please log in.</p>
+                    <form>
+                        <div class="mb-3 row px-3">
+                            <input type="email" class="form-control py-2 col" placeholder="Email">
+                        </div>
+                        <div class="mb-3 row px-3">
+                            <input type="password" class="form-control py-2 col" placeholder="Password">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" class="btn-submit btn btn-dark fs-6" style="margin-left:4px">SIGN IN</button>
+                            <a href="#" class="forgot-password text-decoration-none text-dark">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-5 p-4 border">
+                    <h5 class="mb-4">NEW CUSTOMER?</h5>
+                    <p>Registering for this site allows you to access your order status and history. We'll get a new account set up for you in no time. For this will only ask you for information necessary to make the purchase process faster and easier</p>
+                    <button class="btn-create btn btn-dark btn-lg mt-4 px-5 fs-6">CREATE AN ACCOUNT</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
 
